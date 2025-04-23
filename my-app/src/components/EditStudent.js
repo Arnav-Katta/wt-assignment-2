@@ -17,7 +17,7 @@ const EditStudent = () => {
   });
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/students/${id}`)
+    axios.get(`https://student-management-backend-dlg0.onrender.com/students/${id}`)
       .then((res) => setStudent(res.data))
       .catch((err) => toast.error("Error fetching student"));
   }, [id]);
@@ -37,7 +37,7 @@ const EditStudent = () => {
     }
 
     try {
-      await axios.put(`http://localhost:5000/students/${id}`, student);
+      await axios.put(https://student-management-backend-dlg0.onrender.com/students/${id}`, student);
       toast.success("Student updated!");
       navigate('/students');
     } catch (err) {
