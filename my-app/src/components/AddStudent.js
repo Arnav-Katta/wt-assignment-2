@@ -54,7 +54,8 @@ const AddStudent = () => {
           placeholder="Date of Birth (dd-mm-yyyy)"
           value={student.dob}
           onChange={handleChange}
-          pattern="\d{2}-\d{2}-\d{4}"
+     pattern={"\\d{2}-\\d{2}-\\d{4}"}
+
           title="Enter DOB in dd-mm-yyyy format"
           required
         />
