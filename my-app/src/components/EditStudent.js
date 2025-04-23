@@ -37,7 +37,8 @@ const EditStudent = () => {
     }
 
     try {
-      await axios.put(https://student-management-backend-dlg0.onrender.com/students/${id}`, student);
+await axios.put(`https://student-management-backend-dlg0.onrender.com/students/${id}`, student);
+
       toast.success("Student updated!");
       navigate('/students');
     } catch (err) {
@@ -59,7 +60,8 @@ const EditStudent = () => {
           value={student.dob}
           onChange={handleChange}
           placeholder="Date of Birth (dd-mm-yyyy)"
-          pattern="\d{2}-\d{2}-\d{4}"
+        pattern={"\\d{2}-\\d{2}-\\d{4}"}
+
           title="Enter DOB in dd-mm-yyyy format"
           required
         />
