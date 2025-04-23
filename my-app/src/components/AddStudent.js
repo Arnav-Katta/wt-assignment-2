@@ -32,7 +32,7 @@ const AddStudent = () => {
     }
 
     try {
-      await axios.post('http://localhost:5000/students', student);
+      await axios.post('https://student-management-backend-dlg0.onrender.com/students', student);
       toast.success('Student added successfully!');
       navigate('/students');
     } catch (error) {
